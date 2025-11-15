@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAIM 3.0 | Advanced Cyber-Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="three-js-background" class="bg-canvas"></div>
+    
+    <header id="header" class="main-header">
+        <div class="container header-content">
+            <h1 class="logo">S<span class="glitch">AI</span>M <span class="v3">3.0</span></h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">_home.</a></li>
+                    <li><a href="#about" class="nav-link">_about.</a></li>
+                    <li><a href="#portfolio" class="nav-link">_projects.</a></li>
+                    <li><a href="#contact" class="nav-link">_connect.</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <section id="hero" class="hero-section full-height dark-bg-1" role="banner">
+            <div class="container hero-layout">
+                <div class="hero-text-content">
+                    <p class="greeting">// STATUS: ONLINE</p>
+                    <h2 class="main-headline">
+                        <span class="animated-text">Architecting Digital Futures.</span>
+                        <span class="highlight-role">High-Caliber Full-Stack Developer.</span>
+                    </h2>
+                    <p class="tagline">
+                        Deploying scalable solutions across the MERN and Python ecosystems with a focus on precision engineering.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary">VIEW // CODEBASE</a>
+                        <a href="#" class="terminal-command">saim_profile --read</a>
+                    </div>
+                </div>
+
+                <figure class="hero-image-figure">
+                    <img src="assets/images/saim.png" alt="Saim - Cyber-Developer Profile" class="profile-photo">
+                </figure>
+            </div>
+        </section>
+        
+        <section id="about" class="section-padding dark-bg-2">
+            <div class="container">
+                <h2 class="section-title">01.<span class="highlight">ABOUT</span> // ME</h2>
+                <div class="about-grid">
+                    <article class="about-story">
+                        <p class="lead-paragraph">
+                            I specialize in building complex, high-availability web services. My code is fast, secure, and adheres to strict **DevOps** principles.
+                        </p>
+                        <p class="detail-paragraph">
+                            From microservices in Node.js to performance optimization with GraphQL, I treat development as precision engineering. My goal is to transform ambitious concepts into flawless digital products.
+                        </p>
+                        <div class="skill-matrix">
+                            <h4>// CORE STACK</h4>
+                            <ul>
+                                <li>**FE:** React, Next.js, Redux, SCSS</li>
+                                <li>**BE:** Node.js, Python (Django), NestJS</li>
+                                <li>**DB:** PostgreSQL, Redis, MongoDB</li>
+                                <li>**DEVOPS:** Docker, AWS (Lambda, EC2), CI/CD</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <aside class="code-snippet-box">
+                        <pre>// function isDeveloperOnline()</pre>
+                        <code class="code-block">
+                            <span class="key">const</span> Saim_status = <span class="fun">()</span> => {
+                                <span class="key">return</span> {<br>
+                                    <span class="prop">‎ hiring</span>: true,<br>
+                                    <span class="prop">‎ commits</span>: '+100',<br>
+                                    <span class="prop">‎ location</span>: "Remote",<br>
+                                    <span class="prop">‎ version</span>: "3.0.1_beta"<br>
+                                }
+                            };<br>
+                            <span class="fun">console.log</span>(Saim_status);
+                        </code>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section-padding dark-bg-1">
+            <div class="container">
+                <h2 class="section-title">02.<span class="highlight">PROJECTS</span> // CODE</h2>
+                <p class="section-subtitle">A showcase of advanced technical solutions.</p>
+                
+                <div class="project-grid">
+                    
+                    <article class="project-card" data-project-id="ai">
+                        <div class="card-inner">
+                            <h3 class="project-title">Quick AI // Intelligence Platform</h3>
+                            <p class="project-description">Real-time code generation and content creation via WebSockets and LLM APIs. Optimized for low-latency streaming.</p>
+                            <ul class="technology-list">
+                                <li>React</li><li>Node.js</li><li>WebSockets</li>
+                            </ul>
+                            <div class="holographic-overlay"></div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-project-id="booking">
+                         <div class="card-inner">
+                            <h3 class="project-title">Quick Show // Transactional System</h3>
+                            <p class="project-description">High-concurrency movie ticket booking platform. Features dynamic seat maps and robust transaction handling (PostgreSQL locking).</p>
+                            <ul class="technology-list">
+                                <li>Angular</li><li>Spring Boot</li><li>PostgreSQL</li>
+                            </ul>
+                            <div class="holographic-overlay"></div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-project-id="ecommerce">
+                        <div class="card-inner">
+                            <h3 class="project-title">The Vanta Store // Headless E-Comm</h3>
+                            <p class="project-description">Aesthetic dark-mode E-commerce solution. Focused on SSG performance, Algolia search integration, and Vue.js headless frontend.</p>
+                            <ul class="technology-list">
+                                <li>Vue.js</li><li>Nuxt</li><li>Algolia</li>
+                            </ul>
+                            <div class="holographic-overlay"></div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding dark-bg-2">
+            <div class="container terminal-layout">
+                <h2 class="section-title">03.<span class="highlight">CONNECT</span> // SESSION</h2>
+                <div class="terminal-box">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="title">SAIM@TERMINAL:~$</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-prompt">~$ echo "Initiating Contact Protocol..."</p>
+                        <p class="terminal-response">Contact Protocol Initiated. Please provide credentials.</p>
+                        <form id="contact-form" class="terminal-form">
+                            <div class="form-line">
+                                <label for="term-name">Name</label>
+                                <input type="text" id="term-name" required placeholder="User_ID">
+                            </div>
+                            <div class="form-line">
+                                <label for="term-email">Email</label>
+                                <input type="email" id="term-email" required placeholder="user@domain.com">
+                            </div>
+                            <div class="form-line">
+                                <label for="term-message">Message</label>
+                                <textarea id="term-message" rows="3" required placeholder="Enter command or message"></textarea>
+                            </div>
+                            <button type="submit" class="btn terminal-btn">SEND // EXECUTE</button>
+                            <p id="form-status" class="terminal-status"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="main-footer dark-bg-footer">
+        <div class="container footer-content">
+            <p>// 2025 SAIM 3.0 // ARCHITECTURE COMPLETE</p>
+            <div class="social-links-footer">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>

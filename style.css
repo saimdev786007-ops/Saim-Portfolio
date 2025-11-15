@@ -1,0 +1,458 @@
+/* ========================================================================= */
+/* SAIM 3.0: Cyberpunk Minimalist Dark Theme */
+/* ========================================================================= */
+
+
+/* --- 1. GLOBAL VARIABLES & FONT IMPORT --- */
+:root {
+    --color-bg-primary: #0a0a0a; /* Deepest Black */
+    --color-bg-secondary: #161616;
+    --color-border: #2c2c2c;
+    --color-accent: #00e0ff; /* Neon Cyan */
+    --color-accent-dark: #008c9d;
+    --color-text-primary: #e0e0e0;
+    --color-text-muted: #888888;
+    
+    --font-header: 'Michroma', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    
+    --transition-speed: 0.3s ease;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-mono);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: all var(--transition-speed);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-header);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
+.section-padding { padding: 120px 0; }
+.dark-bg-1 { background-color: var(--color-bg-primary); }
+.dark-bg-2 { background-color: var(--color-bg-secondary); }
+
+.highlight { color: var(--color-accent); }
+/* --- NEON GLOW EFFECT (For Buttons and Highlights) --- */
+.neon-glow {
+    text-shadow: 0 0 5px var(--color-accent), 0 0 10px var(--color-accent-dark);
+}
+
+/* --- 2. HEADER & NAVIGATION --- */
+.main-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    letter-spacing: 2px;
+}
+.logo .glitch { 
+    color: var(--color-accent); 
+    /* Glitch effect styling will be added via keyframes in advanced usage */
+}
+.logo .v3 { 
+    font-size: 0.8em; 
+    color: var(--color-text-muted); 
+}
+
+.nav-list { display: flex; list-style: none; }
+.nav-link {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    transition: color var(--transition-speed);
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-dark);
+}
+
+/* --- 3. HERO SECTION --- */
+.hero-section {
+    padding-top: 150px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative; /* For 3D elements */
+}
+
+/* Placeholder for 3D Background - Needs JS/Three.js */
+#three-js-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 80px;
+    align-items: center;
+    z-index: 10; /* Bring content above 3D background */
+}
+
+.greeting { color: var(--color-accent); font-size: 1rem; }
+
+.main-headline {
+    font-size: 3.8rem;
+    margin: 15px 0 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.highlight-role {
+    display: block;
+    color: var(--color-accent);
+    /* Neon glow on the main role */
+    text-shadow: 0 0 8px var(--color-accent-dark);
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    text-transform: none;
+    border: 1px solid var(--color-accent);
+}
+
+.btn-primary {
+    background-color: var(--color-accent-dark);
+    color: var(--color-bg-primary);
+    box-shadow: 0 0 10px rgba(0, 224, 255, 0.4);
+}
+.btn-primary:hover {
+    background-color: var(--color-accent);
+    box-shadow: 0 0 20px var(--color-accent);
+}
+
+.terminal-command {
+    margin-left: 20px;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%; /* Futuristic circular crop */
+    border: 3px solid var(--color-accent-dark);
+    filter: grayscale(100%) brightness(80%); /* Futuristic monochrome look */
+    transition: all 0.5s ease;
+}
+.profile-photo:hover {
+    filter: grayscale(0%) brightness(100%);
+    transform: rotate(2deg);
+}
+
+/* --- 4. ABOUT SECTION --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+}
+
+.lead-paragraph, .detail-paragraph {
+    font-family: var(--font-mono);
+    color: var(--color-text-primary);
+}
+
+.skill-matrix {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid var(--color-accent-dark);
+    background-color: rgba(0, 224, 255, 0.05);
+}
+
+.skill-matrix h4 { color: var(--color-accent); margin-bottom: 10px; }
+.skill-matrix ul { list-style: none; font-size: 0.9rem; }
+.skill-matrix li { padding: 4px 0; }
+.skill-matrix strong { color: var(--color-accent); }
+
+
+/* --- Code Snippet Box (Futuristic Console Look) --- */
+.code-snippet-box {
+    background-color: #000;
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 15px rgba(0, 224, 255, 0.5);
+    padding: 15px;
+}
+
+pre { 
+    color: var(--color-accent-dark); 
+    margin-bottom: 10px; 
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.code-block {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    display: block;
+}
+
+/* Syntax Highlighting Colors */
+.code-block .key { color: #ff79c6; } /* Pink */
+.code-block .fun { color: #50fa7b; } /* Green */
+.code-block .prop { color: #ffb86c; } /* Yellow */
+
+
+/* --- 5. PROJECTS SECTION (Holographic Feel) --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.project-card {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    position: relative;
+    padding: 2px; /* For the subtle border glow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 25px rgba(0, 224, 255, 0.5);
+}
+
+.card-inner {
+    padding: 30px;
+    background-color: var(--color-bg-secondary);
+    z-index: 2;
+    position: relative;
+}
+
+.project-title {
+    color: var(--color-accent);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.project-description {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.technology-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+}
+
+.technology-list li {
+    background-color: var(--color-accent-dark);
+    color: var(--color-bg-primary);
+    padding: 3px 8px;
+    margin: 5px 5px 0 0;
+}
+
+/* Holographic Overlay Effect (CSS based) */
+.holographic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 50%, rgba(0, 224, 255, 0.4) 50%);
+    background-size: 200% 200%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.project-card:hover .holographic-overlay {
+    opacity: 0.2;
+    animation: holographicScan 2s infinite linear;
+}
+
+@keyframes holographicScan {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* --- 6. CONTACT SECTION (Terminal Style) --- */
+.terminal-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terminal-box {
+    width: 100%;
+    max-width: 800px;
+    background-color: #000;
+    border: 1px solid var(--color-accent-dark);
+    box-shadow: 0 0 20px rgba(0, 224, 255, 0.3);
+}
+
+.terminal-header {
+    background-color: var(--color-border);
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+}
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+.title { 
+    margin-left: 10px; 
+    color: var(--color-text-primary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.terminal-body {
+    padding: 20px;
+    min-height: 300px;
+}
+
+.terminal-prompt { color: var(--color-accent); }
+.terminal-response { color: #f5f5f5; }
+
+.terminal-form { margin-top: 20px; }
+.form-line {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.terminal-form label {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    text-align: right;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}
+
+.terminal-form input, .terminal-form textarea {
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-accent-dark);
+    color: #f5f5f5;
+    font-family: var(--font-mono);
+    padding: 10px 0;
+    outline: none;
+}
+
+.terminal-btn {
+    border: 1px solid #ff79c6; /* Pink accent for action */
+    background-color: rgba(255, 121, 198, 0.2);
+    color: #ff79c6;
+    margin-left: 100px;
+    transition: background-color 0.3s ease;
+}
+.terminal-btn:hover {
+    background-color: rgba(255, 121, 198, 0.4);
+}
+
+.terminal-status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #f5f5f5;
+}
+
+/* --- 7. FOOTER --- */
+.main-footer {
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.social-links-footer a {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: var(--color-text-muted);
+}
+
+.social-links-footer a:hover {
+    color: var(--color-accent);
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+    .hero-layout, .about-grid { grid-template-columns: 1fr; }
+    .hero-text-content { order: 1; }
+    .hero-image-figure { order: 0; margin: 0 auto 40px; }
+    .project-grid { grid-template-columns: repeat(2, 1fr); }
+    .main-headline { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .project-grid { grid-template-columns: 1fr; }
+    .main-nav { display: none; }
+    .menu-toggle { display: block; }
+    .terminal-header { padding: 8px 10px; }
+    .form-line { grid-template-columns: 1fr; }
+    .terminal-form label { text-align: left; padding-top: 0; }
+    .terminal-btn { margin-left: 0; width: 100%; }
+}
